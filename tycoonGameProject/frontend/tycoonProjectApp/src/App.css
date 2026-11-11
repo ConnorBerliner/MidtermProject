@@ -1,0 +1,80 @@
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: system-ui;
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+}
+button:disabled {
+  opacity: 0.5;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.auth {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 320px;
+  margin: 4rem auto;
+}
+.field-error {
+  color: #b00020;
+  margin: 0;
+  font-size: 0.875rem;
+}
+.link {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  cursor: pointer;
+}
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #1a73e8;
+  outline-offset: 2px;
+}
+button[aria-pressed="true"] {
+  font-weight: 700;
+}
+
+.cycle-track {
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 5px;
+  overflow: hidden;
+  margin: 0.5rem 0;
+}
+.cycle-fill {
+  height: 100%;
+  width: 0;
+  background: #1a73e8;
+  border-radius: 5px;
+}
+.cycle-fill.running {
+  animation-name: sail;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes sail {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}

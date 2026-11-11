@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+db.sqlite3
+
+# Env files
+.env
+
+# Node
+node_modules/
+dist/
+
+# Editor / OS
+.vscode/
+.idea/
+Thumbs.db
